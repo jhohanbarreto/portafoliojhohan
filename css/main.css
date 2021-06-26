@@ -1,0 +1,470 @@
+/*Font Raleway*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap");
+/*Font Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+/* -------------------------------------------- Generals -------------------------------------------------------------*/
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #050d18;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Opens Sans", sans-serif;
+  box-sizing: border-box;
+  color: #272829;
+  overflow-y: scroll;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #163f77;
+}
+
+.nav-toggle {
+  position: fixed;
+  font-size: 24px;
+  text-align: right;
+  top: 15px;
+  right: 15px;
+  border: 0;
+  outline: none !important;
+  background: none;
+  z-index: 5;
+}
+.nav-toggle i {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.flex-column {
+  height: 100vh;
+}
+
+.active a {
+  color: white !important;
+}
+.active a ion-icon {
+  color: #007bff !important;
+}
+
+/* ----------------------------------------------- Header ----------------------------------------------------*/
+.header.toggled {
+  margin-left: 0;
+}
+
+.header {
+  position: fixed;
+  width: 300px;
+  transition: all 0.5s;
+  background: #050d18;
+  padding: 0 15px;
+  top: 0;
+  bottom: 0;
+  z-index: 4;
+  overflow-y: auto;
+}
+.header .profile img {
+  display: block;
+  width: 120px;
+  border: 8px solid #212431;
+  margin: 15px auto;
+}
+.header .profile h1 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+.header .profile h1 a {
+  color: white;
+  text-decoration: none;
+}
+.header .profile .icon-social i {
+  font-size: 20px;
+  display: inline-block;
+  color: white !important;
+  background: #212431;
+  padding: 8px 0;
+  border-radius: 50%;
+  width: 36px;
+  transition: 0.3s;
+  margin-right: 5px;
+}
+.header .profile .icon-social i:hover {
+  background: #007bff;
+}
+.header .languages {
+  margin-top: auto;
+}
+.header .languages ul {
+  padding: 0;
+}
+.header .languages .languages-flags {
+  width: 4vh;
+  height: 4vh;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+}
+
+.nav-menu {
+  padding-top: 30px;
+}
+.nav-menu a {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+  font-size: 15px;
+  color: #a8a9b4;
+}
+.nav-menu a:hover {
+  color: white;
+}
+.nav-menu a:hover ion-icon {
+  color: #007bff;
+}
+.nav-menu a ion-icon {
+  font-size: 23px;
+  color: #a8a9b4;
+  text-align: center;
+  width: 1.25em !important;
+  margin-right: 0.5rem !important;
+  vertical-align: middle !important;
+}
+
+/* --------------------------------------------------- Presentation -----------------------------------*/
+#home {
+  margin-left: 300px;
+  height: 100vh;
+  background: url("../img/presentation3.jpg") top center;
+  background-size: cover;
+}
+#home:before {
+  content: "";
+  background: rgba(5, 13, 24, 0.66);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+#home .home-container {
+  min-width: 300px;
+  position: relative;
+  z-index: 2;
+}
+#home h1 {
+  font-size: 64px;
+  color: white;
+  line-height: 56px;
+  font-weight: 700;
+}
+#home p {
+  color: white;
+  margin-bottom: 50px;
+  font-size: 26px;
+}
+#home p span {
+  color: white;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #007bff;
+}
+#home .btn-get-started {
+  font-size: 35px;
+  transition: 0.5s;
+  color: white;
+  height: 70px;
+  display: block;
+  z-index: 2;
+  border-radius: 50px;
+  border: 2px solid white;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+  margin-top: 3rem;
+}
+#home .btn-get-started:hover {
+  color: #007bff;
+}
+#home .btn-get-started .fa-arrow-down {
+  padding-top: 10px;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+}
+
+/* --------------------------------------------- About Section -------------------------------------------------*/
+#main {
+  margin-left: 300px;
+}
+#main .section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #163f77;
+}
+#main .section-title h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #007bff;
+  bottom: 0;
+}
+#main .section-title p {
+  line-height: 1.6;
+}
+#main .arrow-table i {
+  color: #007bff;
+}
+
+/* -------------------------------------------- Skills Section -------------------------------------------------------*/
+.skills .progress {
+  height: 50px;
+  display: block;
+  background: none;
+}
+.skills .progress .skill {
+  padding: 10px 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+}
+.skills .progress .skill .value {
+  float: right;
+  font-style: normal;
+}
+.skills .progress-bar-wrap {
+  background: #dce8f8;
+}
+.skills .progress-bar-wrap .progress-bar {
+  height: 10px;
+  transition: 0.9s;
+  background-color: #007bff;
+  border-radius: 6px;
+}
+.skills .tools {
+  align-items: center;
+}
+.skills .tools img {
+  height: 50px;
+  margin-right: 50px;
+  max-width: 100%;
+}
+
+/* ---------------------------------------------- Portfolio ---------------------------------------------------------- */
+.portfolio .portfolio-container .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  height: 405px;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.23);
+}
+.portfolio .portfolio-container .portfolio-wrap:before {
+  content: "";
+  background-color: rgba(32, 32, 32, 0.85);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+.portfolio .portfolio-container .portfolio-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+.portfolio .portfolio-container .portfolio-wrap:hover .portfolio-link {
+  opacity: 1;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  margin-top: 50%;
+  padding: 5px;
+  display: block;
+}
+.portfolio .portfolio-container .portfolio-wrap img {
+  max-width: 100%;
+  height: auto;
+}
+.portfolio .portfolio-container .portfolio-wrap .portfolio-link {
+  opacity: 1;
+  z-index: 2;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: none;
+}
+.portfolio .portfolio-container .portfolio-wrap .portfolio-link h3 {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  transition: 0.3s;
+  width: 100%;
+}
+.portfolio .portfolio-container .portfolio-wrap .portfolio-link p {
+  color: #c8c8c8;
+}
+
+/* ---------------------------------------------- Contact ----------------------------------------------------------- */
+.contact .info, .contact .form {
+  padding: 30px;
+  width: 100%;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+}
+.contact .info .email:hover i, .contact .info .twitter:hover i, .contact .info .linkedin:hover i, .contact .info .github:hover i, .contact .form .email:hover i, .contact .form .twitter:hover i, .contact .form .linkedin:hover i, .contact .form .github:hover i {
+  background: #149ddd;
+  color: white;
+}
+.contact .info .email i, .contact .info .twitter i, .contact .info .linkedin i, .contact .info .github i, .contact .form .email i, .contact .form .twitter i, .contact .form .linkedin i, .contact .form .github i {
+  font-size: 25px;
+  color: #007bff;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #dff3fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.contact .info .email h4, .contact .info .twitter h4, .contact .info .linkedin h4, .contact .info .github h4, .contact .form .email h4, .contact .form .twitter h4, .contact .form .linkedin h4, .contact .form .github h4 {
+  padding: 10px 0 40px 60px;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #212431;
+  font-family: "Opens Sans", sans-serif;
+}
+.contact .form {
+  width: 100%;
+  padding: 30px;
+}
+
+/* ---------------------------------------------- Icon top ---------------------------------------------------------- */
+.back-to-top {
+  display: none;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: #007bff;
+  color: white !important;
+  z-index: 4;
+  right: 15px;
+  bottom: 15px;
+}
+.back-to-top i {
+  font-size: 24px;
+  position: absolute;
+  top: 7px;
+  left: 9.5px;
+}
+
+/* ------------------------------------------------- Footer -------------------------------------------------------   */
+.footer {
+  margin-bottom: 30px;
+  font-size: 14px;
+  box-shadow: 0px -5px 7px -1px #efeeee;
+}
+.footer .credits i {
+  color: red;
+}
+.footer .credits a {
+  text-decoration: none !important;
+  color: #163f77;
+}
+
+/* --------------------------------------------- Media Display -------------------------------------------------------*/
+@media (max-width: 992px) and (min-width: 1px) {
+  #home {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .header.toggled {
+    margin-left: -300px;
+  }
+
+  #main {
+    margin-left: 0;
+  }
+
+  .tools {
+    margin-top: 1rem !important;
+  }
+  .tools img {
+    margin-top: 40px;
+  }
+
+  .contact #contact_info {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+@media (max-width: 768px) {
+  #home h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .portfolio-wrap {
+    margin-top: 50px;
+  }
+  .portfolio-wrap img {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .languages {
+    margin-top: 25px !important;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
